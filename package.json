@@ -1,0 +1,26 @@
+{
+  "name": "@skycatch/skyapi-sdk",
+  "version": "2.0.4",
+  "description": "Node SDK to interact with SkyAPI",
+  "main": "./dist/skyapi.js",
+  "files": [
+    "dist/skyapi.js"
+  ],
+  "scripts": {
+    "test": "npm run test:ci",
+    "test:ci": "NODE_ENV=test tap './test/**/*.spec.js'",
+    "test:cov": "NODE_ENV=test tap './test/**/*.spec.js' --coverage-report=html",
+    "test:debug": "NODE_ENV=test DEBUG=@skycatch/* DEBUG_COLORS=true mocha --timeout 10000"
+  },
+  "dependencies": {
+    "@zeit/fetch-retry": "^5.0.1",
+    "debug": "^4.3.3",
+    "jws": "^4.0.0",
+    "node-fetch": "^2.6.7",
+    "qs": "^6.10.3"
+  },
+  "devDependencies": {
+    "mocha": "^10.3.0",
+    "tap": "^18.7.0"
+  }
+}
